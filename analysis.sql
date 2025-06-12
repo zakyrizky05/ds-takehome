@@ -66,3 +66,22 @@ repeat_purchases AS (
 
 SELECT * FROM repeat_purchases
 ORDER BY purchase_month;
+
+
+/*
+RFM Segmentation & Repeat Purchase Analysis
+
+1. RFM Segmentation:
+   - Menghitung nilai Recency, Frequency, dan Monetary untuk setiap customer dari data `ds_test`.
+   - Memberikan skor 1–5 untuk masing-masing aspek menggunakan NTILE (kuantil 5).
+   - Menentukan segmentasi pelanggan berdasarkan kombinasi skor:
+     - Champions, Loyal Customers, New Customers, Potential Loyalists, Promising, At Risk, Lost, Others.
+   - Hasil akhir: Daftar pelanggan beserta segmentasi mereka.
+
+2. Repeat Purchase Analysis (Monthly):
+   - Menghitung total pesanan tiap pelanggan per bulan.
+   - Mengidentifikasi pelanggan yang melakukan lebih dari satu pembelian dalam satu bulan (repeat purchase).
+   - Menghasilkan jumlah pelanggan repeat purchase untuk setiap bulan (`repeat_customer_count`).
+
+Tujuan: Memahami perilaku pelanggan secara menyeluruh — baik dari nilai strategis jangka panjang (RFM) maupun keterlibatan bulanan mereka (repeat purchase).
+*/
